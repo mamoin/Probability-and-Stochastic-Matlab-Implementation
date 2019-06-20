@@ -1,0 +1,10 @@
+run=1000000;
+r=ceil(4*rand(run,4)); % sample space generation having 'run' rows and 4 columns
+count=0;
+s=[1 2 3 4]            % success matrix
+for i=1:run
+    t=isequal(r(i,:),s);
+    count=count+t;
+end
+
+p=count/run 
